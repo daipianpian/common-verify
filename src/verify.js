@@ -56,6 +56,27 @@ exports.verify = function(data){
 				msg: '请输入11位正确的手机号'
 			};
 			return npmReturnMsg(regParam, value, msgSuccess, msgFail);
+		}else if(eventName == 'securityCodeFour'){
+			// 验证4位数字的验证码
+			const regParam = {
+				rule: /^[\d]{4}$/,
+				msg: '请输入4位数字的验证码'
+			};
+			return npmReturnMsg(regParam, value, msgSuccess, msgFail);
+		}else if(eventName == 'securityCodeSix'){
+			// 验证6位数字的验证码
+			const regParam = {
+				rule: /^[\d]{6}$/,
+				msg: '请输入6位数字的验证码'
+			};
+			return npmReturnMsg(regParam, value, msgSuccess, msgFail);
+		}else if(eventName == 'checkPassword'){
+			// 密码长度为6~15位，须包含数字、字母至少2种以上元素
+			const regParam = {
+				rule: /^(?!([a-zA-Z]+|\d+)$)[a-zA-Z\d]{6,15}$/,
+				msg: '请输入密码长度为6~15位，须包含数字、字母至少2种以上元素'
+			};
+			return npmReturnMsg(regParam, value, msgSuccess, msgFail);
 		}else if(eventName == 'oneTohundredNum'){
 			// 0~100的整数或小数，包括0和100,小数点后最多只能保留两位
 			const regParam = {

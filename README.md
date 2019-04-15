@@ -31,3 +31,9 @@
    方法名：integerZeroInt
 6. 大于等于0的数字，小数点后最多只能保留两位
    方法名：integerZeroFloat
+7. 验证4位数字的验证码
+   方法名：securityCodeFour
+8. 验证6位数字的验证码
+   方法名：securityCodeSix
+9. 密码长度为6~15位，须包含数字、字母至少2种以上元素
+   方法名：checkPassword
