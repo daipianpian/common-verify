@@ -3,9 +3,9 @@
 
 
 #### 安装教程
-1.  cnpm install --save vue-common-verify
-2.  在main.js里引入：import vueCommonVerify from 'vue-common-verify'
-	而后 Vue.prototype.vueCommonVerify = vueCommonVerify
+1.  cnpm install --save common-verify
+2.  在main.js里引入：import commonVerify from 'common-verify'
+	而后 Vue.prototype.commonVerify = commonVerify
 3.  项目中使用，例如
 	// 验证手机号
 	let data = {
@@ -14,7 +14,7 @@
 		msgSuccess: '验证手机号正确',  // 检验成功时，返回的信息（不必传）
 		msgFail: '验证手机号失败'  // 检验失败时，返回的信息（不必传）
 	}
-	let result = this.vueCommonVerify.verify(data)
+	let result = this.commonVerify.verify(data)
 	console.log('result==='+JSON.stringify(result))
 
 
