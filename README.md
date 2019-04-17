@@ -1,5 +1,5 @@
 # common-verify
-常用的表单验证
+npm插件包-常用的表单验证
 
 
 #### 安装教程
@@ -37,3 +37,8 @@
    方法名：securityCodeSix  
 9. 密码长度为6~15位，须包含数字、字母至少2种以上元素；  
    方法名：checkPassword  
+9. 验证正确的邮箱地址
+   方法名：checkEmail
+
+
+
