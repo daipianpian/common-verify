@@ -77,6 +77,13 @@ exports.verify = function(data){
 				msg: '请输入密码长度为6~15位，须包含数字、字母至少2种以上元素'
 			};
 			return npmReturnMsg(regParam, value, msgSuccess, msgFail);
+		}else if(eventName == 'checkEmail'){
+			// 验证邮箱
+			const regParam = {
+				rule: /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/,
+				msg: '请输入正确的邮箱地址'
+			};
+			return npmReturnMsg(regParam, value, msgSuccess, msgFail);
 		}else if(eventName == 'oneTohundredNum'){
 			// 0~100的整数或小数，包括0和100,小数点后最多只能保留两位
 			const regParam = {
